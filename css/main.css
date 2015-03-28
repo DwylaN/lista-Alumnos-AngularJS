@@ -1,0 +1,63 @@
+
+html body{
+    background-color: #213243;
+    color: #34495e;
+    font-family: helvetica;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1 {
+    color: #1abc9c;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+.nombre-item{
+    font-weight: bold;
+}
+
+.curso-item{
+    font-style: italic;
+    font-size: 12px;
+}
+
+.wrapper{
+    width: 480px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgb(107, 125, 144) , 0 0 0 5px #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.contact-item{
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+button{
+    border:none ;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 15px;
+    padding:  2.5px 5px;
+    -webkit-transition: background .5s ease-out;
+    -o-transition: background .5s ease-out;
+    transition: background .5s ease-out;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #16a085;
+}
+.contact-item:hover {
+    background-color:#ecf0f1;
+    -webkit-transition: background .3s ease-out;
+    -o-transition: background .3s ease-out;
+    transition: background .3s ease-out;
+}

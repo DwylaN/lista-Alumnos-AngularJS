@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cuaderno de Alumnos</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-controller="alumnosController">
+    <h1>Cuaderno de Alumnos</h1>
+    <div class="wrapper">
+        <h3>Lista de Alumnos</h3>
+        <select ng-model="order">
+            <option value="nombre" >nombre</option>
+            <option value="curso" >curso</option>
+            <option value="telefono">telefono</option>
+        </select>
+        <input type="text" ng-model="search">
+        <div ng-repeat="alumno in alumnos | filter:search | orderBy:order" class="contact-item">
+            <div class="nombre-item">{{alumno.nombre}} - {{alumno.telefono}}</div>
+            <span class="curso-item"> {{alumno.curso}} </span>
+        </div>
+    </div>
+    <center>
+        <button ng-click="showForm()" ng-hide="formVisibility">NUEVO ALUMNO</button>
+    </center>
+    <div ng-show="formVisibility" class="wrapper">
+        <h3>Añadir un Alumno</h3>
+        <form>
+            Nombre:
+            <input type="text" ng-model="nuevoAlumno.nombre">
+            <br>Curso :
+            <input type="text" ng-model="nuevoAlumno.curso">
+            <br>Telefono :
+            <input type="text" ng-model="nuevoAlumno.telefono">
+            <br>
+            <center>
+                <button ng-click="save()">Agregar</button>
+            </center>
+        </form>
+    </div>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
